@@ -17,7 +17,7 @@ const CreateMovie = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(
-          "https://popcorn-plus-backend.vercel.apps/movies"
+          "https://popcorn-plus-backend.vercel.app/api/movies"
         );
         setMovies(response.data);
       } catch (error) {
@@ -40,7 +40,7 @@ const CreateMovie = () => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/movies",
+        "https://popcorn-plus-backend.vercel.app/api/movies",
         newMovie
       );
       console.log("Created movie:", response.data);
@@ -60,7 +60,7 @@ const CreateMovie = () => {
   // Remove Movie
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/movies/${id}`);
+      await axios.delete(`https://popcorn-plus-backend.vercel.app/api/movies/${id}`);
       setMovies(movies.filter((movie) => movie._id !== id));
     } catch (error) {
       console.error("Error deleting movie:", error);
