@@ -17,7 +17,7 @@ const CreateMovie = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(
-          "https://popcorn-plus-backend.vercel.apps"
+          "https://popcorn-plus-backend.vercel.apps/movies"
         );
         setMovies(response.data);
       } catch (error) {
