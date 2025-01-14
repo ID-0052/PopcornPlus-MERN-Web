@@ -12,7 +12,7 @@ const Homepage = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(
-          "https://popcorn-plus-backend.vercel.app"
+          "https://popcorn-plus-backend.vercel.app/api/movies"
         );
         setMovies(response.data);
       } catch (error) {
