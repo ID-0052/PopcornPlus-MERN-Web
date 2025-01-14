@@ -13,7 +13,7 @@ const SingleMovie = () => {
       try {
         console.log(`Fetching movie with ID: ${id}`);
         const response = await axios.get(
-          `https://popcorn-plus-backend.vercel.app/movies${id}`
+          `https://popcorn-plus-backend.vercel.app/${id}`
         );
         console.log("Movie data:", response.data);
         setMovie(response.data);
